@@ -119,7 +119,7 @@ func (ctl *UserController) UpdateRealname(ctx context.Context, webCtx web.Contex
 			"details": checkRes.ReasonDetail(),
 			"content": realname,
 		}).Warningf("用户 %d 违规，违规内容：%s", user.ID, checkRes.Reason)
-		return webCtx.JSONError("内容违规，已被系统拦截，如有疑问邮件联系：support@aicode.cc", http.StatusNotAcceptable)
+		return webCtx.JSONError("内容违规，已被系统拦截，如有疑问vx联系：guduai-dajiang", http.StatusNotAcceptable)
 	}
 
 	if err := ctl.userRepo.UpdateRealname(ctx, user.ID, realname); err != nil {

@@ -104,7 +104,7 @@ func (ctl *InfoController) Redirect(ctx context.Context, webCtx web.Context) web
 	return webCtx.HTML(fmt.Sprintf(htmlTemplate, "Redirect", fmt.Sprintf(`<div style="margin: 0; text-align: center; margin-top: 50px;"><a href="%s">NSFW</a></div>`, url)))
 }
 
-const CurrentVersion = "1.0.12"
+const CurrentVersion = "1.0.0"
 
 func (ctl *InfoController) VersionCheck(ctx web.Context) web.Response {
 	clientVersion := ctx.Input("version")
@@ -119,7 +119,7 @@ func (ctl *InfoController) VersionCheck(ctx web.Context) web.Response {
 		"has_update":     hasUpdate,
 		"server_version": CurrentVersion,
 		"force_update":   false,
-		"url":            "https://aidea.aicode.cc",
+		"url":            "",
 		"message":        fmt.Sprintf("新版本 %s 发布啦，赶快去更新吧！", CurrentVersion),
 	})
 }
@@ -318,10 +318,10 @@ const privacyPolicy = `<h1 id="-">隐私政策</h1>
 <h2 id="8-">8. 联系我们</h2>
 <p>如果您对本政策或我们的隐私实践有任何疑问、建议或投诉，请随时与我们联系。您可以通过以下方式联系我们：</p>
 <ul>
-<li>电子邮件：<a href="mailto:mylxsw@aicode.cc">mylxsw@aicode.cc</a></li>
+<li>联系方式：<a href="tel:18898739725">18898739725 vx同号</a></li>
 </ul>
 <p>感谢您选择使用本应用。请您放心，我们会尽最大努力保护您的个人信息安全。</p>
-<p>最后更新日期：2023年5月23日</p>
+<p>最后更新日期：2024年1月1日</p>
 `
 
 const termsOfUser = `<h1 id="-">用户协议</h1>

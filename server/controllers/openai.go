@@ -790,7 +790,7 @@ func (ctl *OpenAIController) contentSafety(req *chat.Request, user *auth.User, s
 	return nil
 }
 
-const violateContentPolicyMessage = "抱歉，您的请求因包含违规内容被系统拦截，如果您对此有任何疑问或想进一步了解详情，欢迎通过以下渠道与我们联系：\n\n服务邮箱：support@aicode.cc\n\n微博：@mylxsw\n\n客服微信：x-prometheus\n\n\n---\n\n> 本次请求不扣除智慧果。"
+const violateContentPolicyMessage = "抱歉，您的请求因包含违规内容被系统拦截，如果您对此有任何疑问或想进一步了解详情，欢迎通过以下渠道与我们联系：\n\n微信：guduai-dajiang\n\n\n---\n\n> 本次请求不扣除智慧果。"
 
 func (ctl *OpenAIController) sendViolateContentPolicyResp(sw *streamwriter.StreamWriter, detail string) {
 	reason := violateContentPolicyMessage

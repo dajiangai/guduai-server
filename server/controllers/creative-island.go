@@ -109,7 +109,7 @@ func (ctl *CreativeIslandController) gallery(ctx context.Context, webCtx web.Con
 			}
 
 			item.Arguments = ""
-			
+
 			return ret
 		}),
 	})
@@ -810,7 +810,7 @@ func (ctl *CreativeIslandController) securityCheck(webCtx web.Context, prompt st
 				"details": checkRes.ReasonDetail(),
 				"content": prompt,
 			}).Warningf("用户 %d 违规，违规内容：%s", userID, checkRes.Reason)
-			return webCtx.JSONError(fmt.Sprintf("内容违规，已被系统拦截，如有疑问邮件联系：support@aicode.cc\n\n原因：%s", checkRes.ReasonDetail()), http.StatusNotAcceptable)
+			return webCtx.JSONError(fmt.Sprintf("内容违规，已被系统拦截，如有疑问vx联系：guduai-dajiang\n\n原因：%s", checkRes.ReasonDetail()), http.StatusNotAcceptable)
 		}
 	}
 
